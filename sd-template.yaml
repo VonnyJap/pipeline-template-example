@@ -12,6 +12,10 @@ config:
   cache:
      pipeline: [~/node_modules]
      event: [$SD_SOURCE_DIR/node_modules]
+  subscribe:
+    scmUrls:
+    - https://github.com/VonnyJap/python-zero-to-hero.git: ['~pr']
+    - https://github.com/VonnyJap/sshca.git: ['~pr']
   shared:
     image: golang
   jobs:
