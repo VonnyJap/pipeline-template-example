@@ -11,7 +11,7 @@ config:
     screwdriver.cd/chainPR: false
   subscribe:
     scmUrls:
-    - git@github.com:vjap1/workflow.git: ['~pr']
+    - https://github.com/VonnyJap/python-zero-to-hero.git: ['~pr']
   cache:
      pipeline: [~/node_modules]
      event: [$SD_SOURCE_DIR/node_modules]
