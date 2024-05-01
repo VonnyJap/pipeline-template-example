@@ -27,4 +27,5 @@ config:
     main:
       requires: [~pr, ~commit]
     extra:
+      image: node:20
       
