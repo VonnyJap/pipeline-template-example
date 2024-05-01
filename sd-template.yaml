@@ -18,6 +18,8 @@ config:
     - https://github.com/VonnyJap/sshca.git: ['~pr']
   shared:
     image: golang
+    environment:
+      FOO: "BAR"
   jobs:
     main:
       requires: [~pr, ~commit]
