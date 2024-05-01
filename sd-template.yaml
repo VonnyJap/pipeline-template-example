@@ -20,8 +20,11 @@ config:
     image: golang
     environment:
       FOO: "BAR"
+    steps:
+      - name: echo "pipeline template test"
+    requires: [main]
   jobs:
     main:
       requires: [~pr, ~commit]
-      steps:
-        - name: echo "pipeline template test"
+    extra:
+      
