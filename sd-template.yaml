@@ -23,8 +23,11 @@ config:
     steps:
       - name: echo "pipeline template test"
     requires: [main]
+    annotations:
+      screwdriver.cd/mergeSharedSteps: true
   jobs:
     main:
+      template: sd/noop@1.0.0
       requires: [~pr, ~commit]
     extra:
       image: node:20
