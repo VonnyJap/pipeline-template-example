@@ -23,12 +23,12 @@ config:
     requires: [main]
     steps:
       - name: echo "boom"
+    annotations:
+      screwdriver.cd/mergeSharedSteps: true
   jobs:
     main:
       template: sd/noop@1.0.0
       requires: [~pr, ~commit]
-      annotations:
-        screwdriver.cd/mergeSharedSteps: true
       steps:
         - name: echo "boom"
     extra:
