@@ -20,8 +20,6 @@ config:
     image: golang
     environment:
       FOO: "BAR"
-    steps:
-      - name: echo "pipeline template test"
     requires: [main]
     annotations:
       screwdriver.cd/mergeSharedSteps: true
@@ -31,4 +29,6 @@ config:
       requires: [~pr, ~commit]
     extra:
       image: node:20
+      steps:
+        - name: echo "pipeline template test"
       
