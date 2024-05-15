@@ -21,8 +21,6 @@ config:
     environment:
       FOO: "BAR"
     requires: [main]
-    steps:
-      - name: echo "boom"
     annotations:
       screwdriver.cd/mergeSharedSteps: true
   jobs:
