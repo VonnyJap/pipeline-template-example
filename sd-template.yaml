@@ -29,8 +29,6 @@ config:
     main:
       template: sd/noop@1.0.0
       requires: [~pr, ~commit]
-      steps:
-        - name: echo "boom"
     extra:
       image: node:20
       steps:
