@@ -23,6 +23,8 @@ config:
     requires: [main]
     annotations:
       screwdriver.cd/mergeSharedSteps: true
+    steps:
+      - name: echo "bang"
   jobs:
     main:
       template: sd/noop@1.0.0
