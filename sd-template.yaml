@@ -27,13 +27,11 @@ config:
     #   - name: echo "bang"
   jobs:
     main:
-      image: node:20
       requires: [~pr, ~commit]
       steps:
         - echofoo: echo $FOO
         - echobar: echo $BAR
     extra:
-      image: node:20
       steps:
         - name: echo "pipeline template test"
       
